@@ -35,8 +35,7 @@ SUBJECT = "Interest in Software Engineer III Role at Walmart (R-2108907)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineer III position at Walmart Global Tech and wanted to express my enthusiasm for this opportunity. 
-
+I hope you're doing well! I recently applied for the Software Engineer III position at Walmart Global Tech and wanted to express my enthusiasm for this opportunity. I am graduating in May 2025 with a strong background in backend and frontend development, cloud technologies, and scalable system design
 Here’s a bit about my experience:
 
 - Backend Development: Built and optimized microservices with Java, Spring Boot, and Hibernate, reducing API latency by 25%.
@@ -45,9 +44,9 @@ Here’s a bit about my experience:
 - Frontend Expertise: Built React + Node.js applications with state management (Redux) and optimized UI performance for millions of users.
 - CI/CD & DevOps: Automated deployments with Jenkins, Docker, and Kubernetes, cutting deployment time from 4 hours to 20 minutes.
 
-I would love the opportunity to discuss how my skills align with Walmart’s engineering needs. Would you be available for a quick chat this week?
+I would love the opportunity to discuss how my skills align with Walmart’s engineering needs. If you’re not the right person to reach out to, could you kindly forward my profile to the relevant hiring team or hiring manager?
 
-Looking forward to hearing from you!  
+Would you be available for a quick chat this week? Looking forward to your response! 
 
 Best regards,  
 Sumit Rodrigues  
@@ -101,7 +100,10 @@ def send_email(receiver_email, receiver_name):
 # ✅ Send emails to all recipients
 for index, row in df.iterrows():
     receiver_email = row["Email"].strip()  # Remove spaces if any
-    receiver_name = row.get("Name", "there").strip()  # Default to "there" if no name
+    receiver_name = row.get("Name", "there")
+    if pd.isna(receiver_name):  # If NaN, replace it with "there"
+        receiver_name = "there"
+    receiver_name = str(receiver_name).strip()   # Convert to string, avoid NaN issues
     print(f"📧 Sending email to: {receiver_email}")  # Debugging print
     send_email(receiver_email, receiver_name)
     time.sleep(5)  # Delay to prevent spam detection
