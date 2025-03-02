@@ -31,22 +31,23 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Interest in Software Engineer III Role at Walmart (R-2108907)"
+SUBJECT = "Application for Software Engineer (NJUS) – Interest in NetJets Engineering Team"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineer III position at Walmart Global Tech and wanted to express my enthusiasm for this opportunity. I am graduating in May 2025 with a strong background in backend and frontend development, cloud technologies, and scalable system design
-Here’s a bit about my experience:
+I hope you’re doing well! I recently applied for the Software Engineer (NJUS) position at NetJets Services, Inc. and wanted to express my enthusiasm for this opportunity.
 
-- Backend Development: Built and optimized microservices with Java, Spring Boot, and Hibernate, reducing API latency by 25%.
-- Cloud & Scalability: Developed and deployed large-scale applications using AWS Lambda, S3, and Kubernetes, improving system efficiency.
-- Service-Oriented Architecture (SOA): Designed and integrated RESTful and GraphQL APIs, reducing redundant data calls by 85%.
-- Frontend Expertise: Built React + Node.js applications with state management (Redux) and optimized UI performance for millions of users.
-- CI/CD & DevOps: Automated deployments with Jenkins, Docker, and Kubernetes, cutting deployment time from 4 hours to 20 minutes.
+I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, graduating in May 2025, and have hands-on experience in full-stack development, cloud computing, and scalable software solutions. With over two years of experience in Java, Spring Boot, React.js, and AWS, I have built and optimized enterprise-level applications, automated deployment pipelines, and developed robust APIs to enhance system performance.
 
-I would love the opportunity to discuss how my skills align with Walmart’s engineering needs. If you’re not the right person to reach out to, could you kindly forward my profile to the relevant hiring team or hiring manager?
+Here’s how my experience aligns with this role:
+- Backend Engineering: Developed and optimized microservices using Java, Spring Boot, and Hibernate, improving system performance and API efficiency.
+- Cloud & DevOps: Worked with AWS (Lambda, S3, EC2) and Azure, deploying scalable applications and integrating CI/CD pipelines for seamless deployments.
+- Frontend & UI Performance: Built React + TypeScript applications with state management (Redux), optimizing UI responsiveness and multi-browser compatibility.
+- Agile & Testing: Implemented unit and integration tests (JUnit, Jest, Cypress) to ensure reliability and enhance software quality in Agile environments.
 
-Would you be available for a quick chat this week? Looking forward to your response! 
+I am incredibly excited about the opportunity to contribute to NetJets’ software solutions for private aviation. If you are the right person to connect with, I would love to discuss how my experience aligns with your engineering needs. Otherwise, I would greatly appreciate it if you could forward my profile to the appropriate hiring manager or recruiter for this role.
+
+Would you be available for a quick call this week? Looking forward to hearing from you
 
 Best regards,  
 Sumit Rodrigues  
@@ -56,7 +57,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/resume.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Netjets.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
