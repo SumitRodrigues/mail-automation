@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/zip-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/toshiba-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -58,7 +58,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume Zip.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Toshiba.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
