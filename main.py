@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/docusign-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/zip-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,25 +31,24 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Software Engineer Role at DocuSign (26232)"
+SUBJECT = "Application for Software Engineering Intern – Summer 2025"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you’re doing well! I recently applied for the Software Engineer role at DocuSign and wanted to take a moment to express my enthusiasm for this opportunity.
+I hope you're doing well! I recently applied for the Software Engineering Intern – Summer 2025 role at Toshiba Global Commerce Solutions and wanted to express my strong interest in the position.
 
-I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, graduating in May 2025, and have a strong background in building scalable cloud-native applications, integrating APIs, and optimizing distributed systems. Here’s how my skill set aligns with this role:
+I am currently pursuing my Computer Science degree at California State University, Fullerton, graduating in December 2025, and I’m eager to bring my backend, API development, and cloud computing expertise to Toshiba’s innovative POS and SaaS solutions.
 
-- Frontend Development: Developed dynamic, user-friendly React + TypeScript applications, leveraging Redux, Tailwind CSS, and Jest for UI state management and testing.
-- Backend & API Development: Designed and deployed RESTful & GraphQL APIs using Node.js, Nest.js, and Spring Boot, reducing redundant API calls by 85%.
-- Cloud & DevOps: Built and deployed microservices on AWS Lambda, S3, and Kubernetes, ensuring high availability and scalability.
-- Distributed Systems & Performance Optimization: Implemented Kafka-based event-driven systems and Redis caching, optimizing API response time and system reliability.
-- Software Development Lifecycle (SDLC): Hands-on experience with CI/CD pipelines (Jenkins, GitHub Actions), unit/integration testing, and security best practices.
+Here’s how my experience aligns with this role:
 
-I’m particularly excited about DocuSign’s mission and its emphasis on secure, scalable software solutions. I would love the opportunity to discuss how my experience can contribute to your team’s success.
+Backend & API Development: Built Spring Boot microservices and GraphQL APIs, integrating with financial applications and retail POS systems to improve transaction processing efficiency.
+Retail & POS Alignment: Engineered financial dashboards for merchants, optimizing data retrieval and enhancing reporting speed—skills directly applicable to Toshiba’s retail technology stack.
+Cloud & DevOps Expertise: Developed AWS-based serverless applications (Lambda, EC2, S3) and automated CI/CD pipelines with Jenkins and Docker, ensuring scalability and reliability.
+Frontend & UI Frameworks: Built React and Angular-based UIs, integrating with real-time event-driven architectures, ensuring cross-browser compatibility for seamless retail experiences.
 
-If you’re the right person to speak with, I’d greatly appreciate the chance to connect. Otherwise, I’d be grateful if you could kindly forward my profile to the hiring manager for this role.
+I am excited about the possibility of contributing to Toshiba’s cutting-edge retail technology and would love the opportunity to discuss how my skills align with your team’s goals. If you are not the right person for this role, I would greatly appreciate it if you could forward my profile to the appropriate hiring manager.
 
-Looking forward to hearing from you!
+Would you be available for a quick chat this week? Looking forward to hearing from you!
 
 Best regards,  
 Sumit Rodrigues  
@@ -59,7 +58,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume Docusign.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume Zip.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
