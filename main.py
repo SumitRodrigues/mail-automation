@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/toshiba-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/nordstrom-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,22 +31,23 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Software Engineering Intern – Summer 2025"
+SUBJECT = "Application for Engineer 1 Role (R-723434) – Passionate About Frontend & Cloud Technologies5"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineering Intern – Summer 2025 role at Toshiba Global Commerce Solutions and wanted to express my strong interest in the position.
+I hope you're doing well! I recently applied for the Engineer 1 role at Nordstrom and wanted to take a moment to express my enthusiasm for this opportunity.
 
-I am currently pursuing my Computer Science degree at California State University, Fullerton, graduating in December 2025, and I’m eager to bring my backend, API development, and cloud computing expertise to Toshiba’s innovative POS and SaaS solutions.
+I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, graduating in May 2025. With 2+ years of experience in full-stack development, I have built scalable and high-performance applications using JavaScript, TypeScript, React.js, Node.js, and Spring Boot while working at BNP Paribas and CSU Fullerton.
 
-Here’s how my experience aligns with this role:
+Here’s how my skills align with the role:
 
-Backend & API Development: Built Spring Boot microservices and GraphQL APIs, integrating with financial applications and retail POS systems to improve transaction processing efficiency.
-Retail & POS Alignment: Engineered financial dashboards for merchants, optimizing data retrieval and enhancing reporting speed—skills directly applicable to Toshiba’s retail technology stack.
-Cloud & DevOps Expertise: Developed AWS-based serverless applications (Lambda, EC2, S3) and automated CI/CD pipelines with Jenkins and Docker, ensuring scalability and reliability.
-Frontend & UI Frameworks: Built React and Angular-based UIs, integrating with real-time event-driven architectures, ensuring cross-browser compatibility for seamless retail experiences.
+- Frontend & Microservices Development: Built React.js and Node.js applications, optimizing UI performance and integrating APIs to improve user experience.
+- Cloud & DevOps: Deployed containerized microservices on AWS and Kubernetes, reducing latency and improving application scalability.
+- Cross-Browser Compatibility: Debugged and tested React.js applications across Chrome, Firefox, and Safari to ensure seamless user experience.
+- CI/CD & Automation: Leveraged Jenkins, Docker, and GitHub Actions to streamline deployments and improve development workflows.
+- Agile Collaboration: Worked in cross-functional teams with designers and backend engineers to build and deploy production-grade applications.
 
-I am excited about the possibility of contributing to Toshiba’s cutting-edge retail technology and would love the opportunity to discuss how my skills align with your team’s goals. If you are not the right person for this role, I would greatly appreciate it if you could forward my profile to the appropriate hiring manager.
+I am excited about the possibility of contributing to Nordstrom’s engineering team and would love to discuss how my background aligns with your needs. If you’re not the right person to reach out to, I’d appreciate it if you could forward my profile to the relevant hiring manager.
 
 Would you be available for a quick chat this week? Looking forward to hearing from you!
 
@@ -58,12 +59,14 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Toshiba.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Nordstrom.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
 
 # ✅ Function to send email
+
+
 def send_email(receiver_email, receiver_name):
     try:
         msg = MIMEMultipart()
@@ -80,7 +83,8 @@ def send_email(receiver_email, receiver_name):
             part = MIMEBase("application", "octet-stream")
             part.set_payload(resume_file.read())
             encoders.encode_base64(part)
-            part.add_header("Content-Disposition", f"attachment; filename={os.path.basename(RESUME_FILENAME)}")
+            part.add_header(
+                "Content-Disposition", f"attachment; filename={os.path.basename(RESUME_FILENAME)}")
             msg.attach(part)
 
         # ✅ Ensure email credentials are loaded correctly
@@ -99,13 +103,15 @@ def send_email(receiver_email, receiver_name):
     except Exception as e:
         print(f"❌ Failed to send email to {receiver_email}: {e}")
 
+
 # ✅ Send emails to all recipients
 for index, row in df.iterrows():
     receiver_email = row["Email"].strip()  # Remove spaces if any
     receiver_name = row.get("Name", "there")
     if pd.isna(receiver_name):  # If NaN, replace it with "there"
         receiver_name = "there"
-    receiver_name = str(receiver_name).strip()   # Convert to string, avoid NaN issues
+    # Convert to string, avoid NaN issues
+    receiver_name = str(receiver_name).strip()
     print(f"📧 Sending email to: {receiver_email}")  # Debugging print
     send_email(receiver_email, receiver_name)
     time.sleep(5)  # Delay to prevent spam detection
