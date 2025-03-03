@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/docusign-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,23 +31,25 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Software Engineer (NJUS) – Interest in NetJets Engineering Team"
+SUBJECT = "Application for Software Engineer Role at DocuSign (26232)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you’re doing well! I recently applied for the Software Engineer (NJUS) position at NetJets Services, Inc. and wanted to express my enthusiasm for this opportunity.
+I hope you’re doing well! I recently applied for the Software Engineer role at DocuSign and wanted to take a moment to express my enthusiasm for this opportunity.
 
-I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, graduating in May 2025, and have hands-on experience in full-stack development, cloud computing, and scalable software solutions. With over two years of experience in Java, Spring Boot, React.js, and AWS, I have built and optimized enterprise-level applications, automated deployment pipelines, and developed robust APIs to enhance system performance.
+I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, graduating in May 2025, and have a strong background in building scalable cloud-native applications, integrating APIs, and optimizing distributed systems. Here’s how my skill set aligns with this role:
 
-Here’s how my experience aligns with this role:
-- Backend Engineering: Developed and optimized microservices using Java, Spring Boot, and Hibernate, improving system performance and API efficiency.
-- Cloud & DevOps: Worked with AWS (Lambda, S3, EC2) and Azure, deploying scalable applications and integrating CI/CD pipelines for seamless deployments.
-- Frontend & UI Performance: Built React + TypeScript applications with state management (Redux), optimizing UI responsiveness and multi-browser compatibility.
-- Agile & Testing: Implemented unit and integration tests (JUnit, Jest, Cypress) to ensure reliability and enhance software quality in Agile environments.
+- Frontend Development: Developed dynamic, user-friendly React + TypeScript applications, leveraging Redux, Tailwind CSS, and Jest for UI state management and testing.
+- Backend & API Development: Designed and deployed RESTful & GraphQL APIs using Node.js, Nest.js, and Spring Boot, reducing redundant API calls by 85%.
+- Cloud & DevOps: Built and deployed microservices on AWS Lambda, S3, and Kubernetes, ensuring high availability and scalability.
+- Distributed Systems & Performance Optimization: Implemented Kafka-based event-driven systems and Redis caching, optimizing API response time and system reliability.
+- Software Development Lifecycle (SDLC): Hands-on experience with CI/CD pipelines (Jenkins, GitHub Actions), unit/integration testing, and security best practices.
 
-I am incredibly excited about the opportunity to contribute to NetJets’ software solutions for private aviation. If you are the right person to connect with, I would love to discuss how my experience aligns with your engineering needs. Otherwise, I would greatly appreciate it if you could forward my profile to the appropriate hiring manager or recruiter for this role.
+I’m particularly excited about DocuSign’s mission and its emphasis on secure, scalable software solutions. I would love the opportunity to discuss how my experience can contribute to your team’s success.
 
-Would you be available for a quick call this week? Looking forward to hearing from you
+If you’re the right person to speak with, I’d greatly appreciate the chance to connect. Otherwise, I’d be grateful if you could kindly forward my profile to the hiring manager for this role.
+
+Looking forward to hearing from you!
 
 Best regards,  
 Sumit Rodrigues  
@@ -57,7 +59,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Netjets.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume Docusign.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
