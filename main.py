@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/nordstrom-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/livenation-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,25 +31,23 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Engineer 1 Role (R-723434) – Passionate About Frontend & Cloud Technologies5"
+SUBJECT = "Application for Software Engineer Intern – Summer 2025 (JR-76685)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Engineer 1 role at Nordstrom and wanted to take a moment to express my enthusiasm for this opportunity.
+I hope you're doing well! I recently applied for the Software Engineer Intern position at LiveNation Entertainments and wanted to express my enthusiasm for this opportunity.
 
-I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, graduating in May 2025. With 2+ years of experience in full-stack development, I have built scalable and high-performance applications using JavaScript, TypeScript, React.js, Node.js, and Spring Boot while working at BNP Paribas and CSU Fullerton.
+I am currently pursuing my Master’s in Computer Science at California State University, Fullerton and will be graduating in December 2025. With over two years of experience in software development, I have honed my skills in Java, JavaScript, React.js, and AWS, making me a strong candidate for this role.
 
 Here’s how my skills align with the role:
+- Backend Development: Experience in Java and Spring Boot, building scalable microservices and automating deployments using CI/CD pipelines with Jenkins and Docker.
+- Frontend Expertise: Developed dynamic and interactive React.js and TypeScript applications, implementing best UI/UX practices to improve performance.
+- Cloud & API Development: Built and integrated RESTful APIs and GraphQL services on AWS Lambda and S3, optimizing data retrieval and reducing latency.
+- Automation & Testing: Hands-on experience with Jest, Mocha, Selenium, and Postman, ensuring robust application performance.
 
-- Frontend & Microservices Development: Built React.js and Node.js applications, optimizing UI performance and integrating APIs to improve user experience.
-- Cloud & DevOps: Deployed containerized microservices on AWS and Kubernetes, reducing latency and improving application scalability.
-- Cross-Browser Compatibility: Debugged and tested React.js applications across Chrome, Firefox, and Safari to ensure seamless user experience.
-- CI/CD & Automation: Leveraged Jenkins, Docker, and GitHub Actions to streamline deployments and improve development workflows.
-- Agile Collaboration: Worked in cross-functional teams with designers and backend engineers to build and deploy production-grade applications.
+I am excited about the prospect of working at Ticketmaster to contribute to building a seamless and secure Accounts and Authentication system. If you are the right person for this role, I would love to connect and discuss my qualifications further. If not, I would really appreciate it if you could forward my profile to the hiring manager or relevant team.
 
-I am excited about the possibility of contributing to Nordstrom’s engineering team and would love to discuss how my background aligns with your needs. If you’re not the right person to reach out to, I’d appreciate it if you could forward my profile to the relevant hiring manager.
-
-Would you be available for a quick chat this week? Looking forward to hearing from you!
+Looking forward to hearing your thoughts.
 
 Best regards,  
 Sumit Rodrigues  
@@ -59,7 +57,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Nordstrom.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - LiveNation.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
