@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/livenation-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/oracle-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,23 +31,25 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Software Engineer Intern – Summer 2025 (JR-76685)"
+SUBJECT = "Interest in Software Development Engineer Role at Oracle (281122)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineer Intern position at LiveNation Entertainments and wanted to express my enthusiasm for this opportunity.
+I hope you're doing well! I recently applied for the Software Engineer position at Oracle America, Inc., using a referral, and I’m eager to express my strong interest in this opportunity.
 
-I am currently pursuing my Master’s in Computer Science at California State University, Fullerton and will be graduating in December 2025. With over two years of experience in software development, I have honed my skills in Java, JavaScript, React.js, and AWS, making me a strong candidate for this role.
+Here’s a bit about my background and how I align with the role:
 
-Here’s how my skills align with the role:
-- Backend Development: Experience in Java and Spring Boot, building scalable microservices and automating deployments using CI/CD pipelines with Jenkins and Docker.
-- Frontend Expertise: Developed dynamic and interactive React.js and TypeScript applications, implementing best UI/UX practices to improve performance.
-- Cloud & API Development: Built and integrated RESTful APIs and GraphQL services on AWS Lambda and S3, optimizing data retrieval and reducing latency.
-- Automation & Testing: Hands-on experience with Jest, Mocha, Selenium, and Postman, ensuring robust application performance.
+- Software Development Experience: 2+ years of hands-on experience in Java, JavaScript, TypeScript, and ReactJS, building scalable and efficient applications.
+- Backend Expertise: Designed and implemented RESTful APIs and integrated DynamoDB, enhancing system efficiency.
+- Front-End Development: Developed user-friendly, high-performance interfaces with modern frameworks like ReactJS, ensuring a seamless user experience.
+- Algorithm & Data Structures: Proficient in design and analysis of algorithms, object-oriented design, and advanced data structures such as dynamic hashing and tries.
+- Software Architecture & Security: Applied design patterns, UML modeling, and secure coding best practices to develop robust applications.
 
-I am excited about the prospect of working at Ticketmaster to contribute to building a seamless and secure Accounts and Authentication system. If you are the right person for this role, I would love to connect and discuss my qualifications further. If not, I would really appreciate it if you could forward my profile to the hiring manager or relevant team.
+I am currently pursuing my Master’s in Computer Science and will be graduating in May 2025. Oracle’s commitment to cloud innovation and enterprise solutions excites me, and I would love the opportunity to contribute my technical expertise to your team.
 
-Looking forward to hearing your thoughts.
+If you are the right person to discuss this opportunity with, I’d greatly appreciate the chance to connect. If not, I would be grateful if you could forward my profile to the hiring manager for this role.
+
+Looking forward to your response!
 
 Best regards,  
 Sumit Rodrigues  
@@ -57,7 +59,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - LiveNation.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume Oracle.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
