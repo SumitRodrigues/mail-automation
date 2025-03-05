@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/ukg-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/applovin-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,22 +31,25 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Interest in Software Engineer Role at UKG (SOFTW010383)"
+SUBJECT = "Enthusiastic Applicant for Software Engineering Intern Role – Summer 2025"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineer position at UKG and wanted to express my strong interest in this opportunity. I am graduating with my Master’s in Computer Science in May 2025 and have been actively working with Java, JavaScript, React.js, and Spring Boot to develop scalable applications for finance and enterprise systems.
+I hope you're doing well! I recently applied for the Software Engineering Intern position at AppLovin and am excited about the opportunity to contribute to your team.
 
-Here’s how my skills align with this role:
+A bit about me:
 
-- Full-Stack Development: Built and optimized microservices using Java, Spring Boot, and React.js, delivering high-performance applications in banking and fintech sectors.
-- Cloud & DevOps: Worked with AWS, Azure, Kubernetes, and Docker to enhance application scalability, performance, and deployment automation.
-- API & Database Management: Designed RESTful and GraphQL APIs, improving backend efficiency while managing large-scale databases (SQL, MySQL, PostgreSQL).
-- CI/CD & Agile Workflow: Automated Jenkins-based CI/CD pipelines, reducing deployment time by 80% and improving code release frequency.
+- Backend Development: Experience with Java and Spring Boot, developing scalable microservices and data pipelines.
+- High-Performance Systems: Built and optimized ETL pipelines using Apache Spark, Kubernetes, and Cassandra, reducing data processing time by 50%.
+- Cloud & DevOps: Worked with AWS (EC2, Lambda, S3), Docker, and Kubernetes to improve system efficiency.
+- Data Structures & Algorithms: Strong foundation in sorting algorithms, multithreading, and parallel processing, improving backend request handling by 40%.
+- Testing & Security: Implemented Spring Security with OAuth2 and conducted unit testing with JUnit & Postman, ensuring secure and stable deployments.
 
-I would love to discuss how my experience aligns with UKG’s vision and explore how I can contribute to your engineering team. Please let me know if we can schedule a quick chat. Also, if you’re not the right person for this role, I’d greatly appreciate it if you could forward my profile to the appropriate hiring manager.
+I’m currently pursuing my Master’s in Computer Science at California State University, Fullerton, and will graduate in December 2025. I would love the opportunity to discuss how my skills align with AppLovin’s engineering team and how I can contribute to building high-performance, scalable applications.
 
-Looking forward to your response!
+If you're the right contact, I’d appreciate the chance to connect. Otherwise, I’d be grateful if you could point me in the direction of the hiring manager.
+
+Looking forward to hearing from you!
 
 Best regards,  
 Sumit Rodrigues  
@@ -56,7 +59,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume UKG.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Applovin Intern.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
