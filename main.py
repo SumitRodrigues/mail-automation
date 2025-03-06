@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/splunk-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/solarlandscape-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,24 +31,22 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Frontend Software Engineer – Early in Career at Splunk"
+SUBJECT = "Excited to Apply for Software Engineer Intern Role at Solar Landscape"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope this email finds you well! I’m a Master’s student in Computer Science at California State University, Fullerton, graduating in May 2025, and I recently applied for the Frontend Software Engineer – Early in Career role at Splunk. I’m passionate about frontend development and building scalable, high-performance user experiences.
+I hope this email finds you well! I’m a Computer Science student graduating in December 2025 and currently preparing to recruit for Software Engineer Intern positions. I am passionate about leveraging technology to build efficient, scalable solutions that drive impactful change—especially in industries like renewable energy.
 
 Here’s a little more about me:
 
-- Frontend Development: Extensive experience with React.js, TypeScript, JavaScript, and Redux, optimizing UI performance and ensuring seamless user interactions.
-- Testing & CI/CD: Hands-on experience with Storybook, and automated CI/CD pipelines (Jenkins, Docker, Kubernetes) to maintain scalable and maintainable frontend systems.
-- Performance Optimization: Implemented React.memo, lazy loading, and code splitting, achieving 25% improvement in UI responsiveness at BNP Paribas for fintech applications.
-- Agile & Collaboration: Worked in Agile teams using GitHub, JIRA, and Scrum methodologies, ensuring smooth cross-functional collaboration.
+- Full-Stack Development: Developed and deployed React.js and Node.js applications, implementing RESTful APIs and GraphQL to optimize backend efficiency.
+- Cloud & DevOps: Worked with AWS services (Lambda, EC2, S3, RDS), CI/CD pipelines (Jenkins, Docker, Kubernetes), and infrastructure automation to streamline deployments.
+- Database Management: Optimized SQL queries for real-time analytics, improving data retrieval performance in large-scale applications.
+- Passion for Renewable Energy: Excited about Solar Landscape’s mission to democratize clean energy access and eager to contribute through innovative software solutions.
 
-I’m excited about the opportunity to contribute to Splunk’s mission of building a secure and resilient digital world and would love to discuss how my skills align with your team’s needs. Would you be available for a quick chat this week?
+I’m preparing to apply for the Software Engineer Intern role at Solar Landscape this summer and would appreciate the opportunity to ask you a few specific questions about the role and your experience. Would you be available for a quick 15-minute chat this week?
 
-If you’re not the right person to contact, I’d really appreciate it if you could forward my profile to the appropriate hiring manager.
-
-Looking forward to your response!
+Thanks so much in advance for your time!
 
 Best regards,  
 Sumit Rodrigues  
@@ -58,7 +56,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Splunk Frontend.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Solar Landscape.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
