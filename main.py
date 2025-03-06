@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/applovin-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/splunk-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,25 +31,24 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Enthusiastic Applicant for Software Engineering Intern Role – Summer 2025"
+SUBJECT = "Application for Frontend Software Engineer – Early in Career at Splunk"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineering Intern position at AppLovin and am excited about the opportunity to contribute to your team.
+I hope this email finds you well! I’m a Master’s student in Computer Science at California State University, Fullerton, graduating in May 2025, and I recently applied for the Frontend Software Engineer – Early in Career role at Splunk. I’m passionate about frontend development and building scalable, high-performance user experiences.
 
-A bit about me:
+Here’s a little more about me:
 
-- Backend Development: Experience with Java and Spring Boot, developing scalable microservices and data pipelines.
-- High-Performance Systems: Built and optimized ETL pipelines using Apache Spark, Kubernetes, and Cassandra, reducing data processing time by 50%.
-- Cloud & DevOps: Worked with AWS (EC2, Lambda, S3), Docker, and Kubernetes to improve system efficiency.
-- Data Structures & Algorithms: Strong foundation in sorting algorithms, multithreading, and parallel processing, improving backend request handling by 40%.
-- Testing & Security: Implemented Spring Security with OAuth2 and conducted unit testing with JUnit & Postman, ensuring secure and stable deployments.
+- Frontend Development: Extensive experience with React.js, TypeScript, JavaScript, and Redux, optimizing UI performance and ensuring seamless user interactions.
+- Testing & CI/CD: Hands-on experience with Storybook, and automated CI/CD pipelines (Jenkins, Docker, Kubernetes) to maintain scalable and maintainable frontend systems.
+- Performance Optimization: Implemented React.memo, lazy loading, and code splitting, achieving 25% improvement in UI responsiveness at BNP Paribas for fintech applications.
+- Agile & Collaboration: Worked in Agile teams using GitHub, JIRA, and Scrum methodologies, ensuring smooth cross-functional collaboration.
 
-I’m currently pursuing my Master’s in Computer Science at California State University, Fullerton, and will graduate in December 2025. I would love the opportunity to discuss how my skills align with AppLovin’s engineering team and how I can contribute to building high-performance, scalable applications.
+I’m excited about the opportunity to contribute to Splunk’s mission of building a secure and resilient digital world and would love to discuss how my skills align with your team’s needs. Would you be available for a quick chat this week?
 
-If you're the right contact, I’d appreciate the chance to connect. Otherwise, I’d be grateful if you could point me in the direction of the hiring manager.
+If you’re not the right person to contact, I’d really appreciate it if you could forward my profile to the appropriate hiring manager.
 
-Looking forward to hearing from you!
+Looking forward to your response!
 
 Best regards,  
 Sumit Rodrigues  
@@ -59,7 +58,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Applovin Intern.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Splunk Frontend.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
