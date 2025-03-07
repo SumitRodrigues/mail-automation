@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/athenahealth-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/tesla-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,23 +31,20 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Excited to Apply for Software Engineer Role at AthenaHealth (R11917)"
+SUBJECT = "Application for Tesla Software Engineering Internship – Frontend Development(234908)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineer position at athenahealth and wanted to express my enthusiasm for this opportunity.
+I hope you're doing well! I recently applied for the Software Engineering Internship at Tesla and wanted to express my enthusiasm for this opportunity. Given my strong frontend development background and passion for creating high-performance web applications, I believe I would be a valuable addition to your team.
 
 A bit about me:
+- Frontend Engineering Expertise: 2+ years of experience developing scalable, responsive applications using React.js, TypeScript, and SCSS, ensuring seamless cross-platform experiences.
+- Performance Optimization: Implemented Redux for state management and React Hook Form for dynamic form validation, improving UI efficiency.
+- API Integration & Cloud: Collaborated with backend teams to integrate RESTful APIs, handling data fetching, error management, and dynamic rendering. Experience working with AWS, Azure, and Google Cloud.
+- Visualization & Data Analytics: Built interactive D3.js dashboards, enhancing real-time visualization for fintech and e-commerce platforms.
+- Cross-Platform Development: Adapted React components for React Native, ensuring consistent functionality across mobile and web platforms.
 
-- Full-Stack Development: Experience building scalable applications using Java, Spring Boot, and React.js, optimizing system responsiveness and efficiency.
-- Backend & API Development: Designed and integrated RESTful APIs and PostgreSQL, improving request handling throughput by 40%.
-- Cloud & DevOps Expertise: Worked with AWS (EC2, S3, Lambda), Docker, and Kubernetes, streamlining deployments and reducing system downtime.
-- CI/CD & Agile Workflow: Automated Jenkins-based pipelines, enhancing software delivery speed and ensuring high code quality.
-- Frontend Optimization: Developed React.js dashboards and optimized Redux state management, improving UI performance for fintech applications.
-
-I am currently pursuing my Master's in Computer Science at California State University, Fullerton, and will be graduating in May 2025. Given my passion for building robust healthcare solutions, I would love to bring my skills to athenahealth and contribute to its mission of delivering sustainable, high-quality healthcare.
-
-Would you be available for a quick chat to discuss how my background aligns with your team’s needs? Also, if you're not the right contact, I’d greatly appreciate it if you could direct me to the appropriate hiring manager.
+I’m incredibly excited about Tesla’s mission and cutting-edge technology, and I would love the opportunity to contribute to the frontend engineering team. Would it be possible to set up a time to discuss how my skills align with Tesla’s needs? If you're not the right person, I’d really appreciate it if you could direct me to the appropriate hiring manager.
 
 Looking forward to your response!
 
@@ -59,7 +56,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - AthenaHealth.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Tesla Frontend.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
