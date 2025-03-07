@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/solarlandscape-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/athenahealth-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,22 +31,25 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Excited to Apply for Software Engineer Intern Role at Solar Landscape"
+SUBJECT = "Excited to Apply for Software Engineer Role at AthenaHealth (R11917)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope this email finds you well! I’m a Computer Science student graduating in December 2025 and currently preparing to recruit for Software Engineer Intern positions. I am passionate about leveraging technology to build efficient, scalable solutions that drive impactful change—especially in industries like renewable energy.
+I hope you're doing well! I recently applied for the Software Engineer position at athenahealth and wanted to express my enthusiasm for this opportunity.
 
-Here’s a little more about me:
+A bit about me:
 
-- Full-Stack Development: Developed and deployed React.js and Node.js applications, implementing RESTful APIs and GraphQL to optimize backend efficiency.
-- Cloud & DevOps: Worked with AWS services (Lambda, EC2, S3, RDS), CI/CD pipelines (Jenkins, Docker, Kubernetes), and infrastructure automation to streamline deployments.
-- Database Management: Optimized SQL queries for real-time analytics, improving data retrieval performance in large-scale applications.
-- Passion for Renewable Energy: Excited about Solar Landscape’s mission to democratize clean energy access and eager to contribute through innovative software solutions.
+- Full-Stack Development: Experience building scalable applications using Java, Spring Boot, and React.js, optimizing system responsiveness and efficiency.
+- Backend & API Development: Designed and integrated RESTful APIs and PostgreSQL, improving request handling throughput by 40%.
+- Cloud & DevOps Expertise: Worked with AWS (EC2, S3, Lambda), Docker, and Kubernetes, streamlining deployments and reducing system downtime.
+- CI/CD & Agile Workflow: Automated Jenkins-based pipelines, enhancing software delivery speed and ensuring high code quality.
+- Frontend Optimization: Developed React.js dashboards and optimized Redux state management, improving UI performance for fintech applications.
 
-I’m preparing to apply for the Software Engineer Intern role at Solar Landscape this summer and would appreciate the opportunity to ask you a few specific questions about the role and your experience. Would you be available for a quick 15-minute chat this week?
+I am currently pursuing my Master's in Computer Science at California State University, Fullerton, and will be graduating in May 2025. Given my passion for building robust healthcare solutions, I would love to bring my skills to athenahealth and contribute to its mission of delivering sustainable, high-quality healthcare.
 
-Thanks so much in advance for your time!
+Would you be available for a quick chat to discuss how my background aligns with your team’s needs? Also, if you're not the right contact, I’d greatly appreciate it if you could direct me to the appropriate hiring manager.
+
+Looking forward to your response!
 
 Best regards,  
 Sumit Rodrigues  
@@ -56,7 +59,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Solar Landscape.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - AthenaHealth.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
