@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/ups-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/nike-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,25 +31,21 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Software Development Engineer I – UPS(R25004867)"
+SUBJECT = "Interest in Software Engineer (Fullstack) Role at RudderStack"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you’re doing well. I recently applied for the Software Development Engineer I position at UPS and wanted to take a moment to express my enthusiasm for the opportunity. Given my background in backend development, distributed systems, and cloud technologies, I believe I would be a strong fit for this role.
+I hope this email finds you well! I’m a Software Engineer Student Assistant at California State University, Fullerton, studying Computer Science, and currently preparing to recruit for full-time software engineering positions. I’m passionate about building scalable distributed systems and leveraging real-time data pipelines to drive efficient decision-making.
 
-I recently completed my Master of Science in Computer Science from California State University, Fullerton (GPA: 3.8/4.0) in May 2025. My coursework in Advanced Algorithms, Cloud Computing, and Advanced Database Systems has equipped me with a strong foundation in building scalable, high-performance applications.
+Here’s a little more about me:
 
-Why I am a good fit for this role:
+- Work Experience: I’ve worked on full-stack applications using Node.js, TypeScript, React.js, and PostgreSQL, developing optimized microservices and implementing event-driven architectures with Kafka. Previously, I worked at BNP Paribas, where I helped design high-performance distributed systems for fintech applications.
+- On-Campus Involvement: At CSUF, I have contributed to modernizing CI/CD workflows, migrating legacy infrastructure to AWS, and improving developer productivity by automating deployment pipelines.
+- Personal Interests: Outside of coding, I enjoy hiking, experimenting with home automation projects, and staying up to date on the latest cloud computing advancements.
 
-- Developing backend microservices using Java, Spring Boot, and PostgreSQL, improving system scalability and reducing latency by 25%.
-- Building event-driven architectures with Apache Kafka and RabbitMQ, optimizing real-time message streaming and handling high-throughput data.
-- Implementing CI/CD pipelines with Jenkins, Docker, and Kubernetes, ensuring seamless automated deployments with zero downtime.
-- Monitoring system performance using Grafana, reducing incident resolution time by 65%.
-- Optimizing data processing pipelines with Spark and Cassandra, cutting computation times by 50% for large datasets.
+I’m preparing to apply for the Software Engineer (Fullstack) role at RudderStack this spring and would appreciate the opportunity to ask you a few specific questions about the role and your experience. Would you be available for a quick 15-minute chat at [Insert Specific Time]?
 
-I’m eager to bring my expertise in Java, distributed computing, and cloud-based optimizations to UPS’ Operations Research group, contributing to the development of highly scalable and efficient software solutions. I would love the opportunity to further discuss how my skills align with your team’s goals.
-
-Please let me know if there’s a convenient time for a conversation. Looking forward to hearing from you!
+Thanks so much in advance for your time!
 
 Best regards,  
 Sumit Rodrigues  
@@ -59,7 +55,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - UPS SDE1.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Nike SDE 1.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
