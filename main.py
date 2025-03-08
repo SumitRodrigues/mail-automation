@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/tesla-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/ups-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,22 +31,25 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Tesla Software Engineering Internship – Frontend Development(234908)"
+SUBJECT = "Application for Software Development Engineer I – UPS(R25004867)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineering Internship at Tesla and wanted to express my enthusiasm for this opportunity. Given my strong frontend development background and passion for creating high-performance web applications, I believe I would be a valuable addition to your team.
+I hope you’re doing well. I recently applied for the Software Development Engineer I position at UPS and wanted to take a moment to express my enthusiasm for the opportunity. Given my background in backend development, distributed systems, and cloud technologies, I believe I would be a strong fit for this role.
 
-A bit about me:
-- Frontend Engineering Expertise: 2+ years of experience developing scalable, responsive applications using React.js, TypeScript, and SCSS, ensuring seamless cross-platform experiences.
-- Performance Optimization: Implemented Redux for state management and React Hook Form for dynamic form validation, improving UI efficiency.
-- API Integration & Cloud: Collaborated with backend teams to integrate RESTful APIs, handling data fetching, error management, and dynamic rendering. Experience working with AWS, Azure, and Google Cloud.
-- Visualization & Data Analytics: Built interactive D3.js dashboards, enhancing real-time visualization for fintech and e-commerce platforms.
-- Cross-Platform Development: Adapted React components for React Native, ensuring consistent functionality across mobile and web platforms.
+I recently completed my Master of Science in Computer Science from California State University, Fullerton (GPA: 3.8/4.0) in May 2025. My coursework in Advanced Algorithms, Cloud Computing, and Advanced Database Systems has equipped me with a strong foundation in building scalable, high-performance applications.
 
-I’m incredibly excited about Tesla’s mission and cutting-edge technology, and I would love the opportunity to contribute to the frontend engineering team. Would it be possible to set up a time to discuss how my skills align with Tesla’s needs? If you're not the right person, I’d really appreciate it if you could direct me to the appropriate hiring manager.
+Why I am a good fit for this role:
 
-Looking forward to your response!
+- Developing backend microservices using Java, Spring Boot, and PostgreSQL, improving system scalability and reducing latency by 25%.
+- Building event-driven architectures with Apache Kafka and RabbitMQ, optimizing real-time message streaming and handling high-throughput data.
+- Implementing CI/CD pipelines with Jenkins, Docker, and Kubernetes, ensuring seamless automated deployments with zero downtime.
+- Monitoring system performance using Grafana, reducing incident resolution time by 65%.
+- Optimizing data processing pipelines with Spark and Cassandra, cutting computation times by 50% for large datasets.
+
+I’m eager to bring my expertise in Java, distributed computing, and cloud-based optimizations to UPS’ Operations Research group, contributing to the development of highly scalable and efficient software solutions. I would love the opportunity to further discuss how my skills align with your team’s goals.
+
+Please let me know if there’s a convenient time for a conversation. Looking forward to hearing from you!
 
 Best regards,  
 Sumit Rodrigues  
@@ -56,7 +59,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Tesla Frontend.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - UPS SDE1.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
