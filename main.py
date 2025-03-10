@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/rudderstack-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/zendesk-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,21 +31,25 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Interest in Software Engineer (Fullstack) Role at RudderStack"
+SUBJECT = "Excited to Apply for Software Engineer II (Front-End) Role at Zendesk - R30251"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope this email finds you well! I’m a Software Engineer Student Assistant at California State University, Fullerton, studying Computer Science, and currently preparing to recruit for full-time software engineering positions. I’m passionate about building scalable distributed systems and leveraging real-time data pipelines to drive efficient decision-making.
+I hope you're doing well! I recently applied for the Software Engineer II (Front-End) role at Zendesk and wanted to express my enthusiasm for this opportunity.
 
-Here’s a little more about me:
+A bit about me:
 
-- Work Experience: I’ve worked on full-stack applications using Node.js, TypeScript, React.js, and PostgreSQL, developing optimized microservices and implementing event-driven architectures with Kafka. Previously, I worked at BNP Paribas, where I helped design high-performance distributed systems for fintech applications.
-- On-Campus Involvement: At CSUF, I have contributed to modernizing CI/CD workflows, migrating legacy infrastructure to AWS, and improving developer productivity by automating deployment pipelines.
-- Personal Interests: Outside of coding, I enjoy hiking, experimenting with home automation projects, and staying up to date on the latest cloud computing advancements.
+- Frontend Expertise: Developed responsive web applications using React.js, TypeScript, and Java, ensuring optimal user experiences across devices.
+- Performance Optimization: Leveraged Webpack, Babel, and tree-shaking techniques to reduce frontend compilation time by 50% for high-traffic applications.
+- API Development & Integration: Designed and integrated RESTful and GraphQL APIs, ensuring secure data retrieval and efficient database queries.
+- Cloud & DevOps: Automated CI/CD pipelines using Jenkins, Docker, and Kubernetes, cutting deployment time from 4 hours to 20 minutes with zero downtime.
+- Real-World Impact: Built an AI-powered inventory prediction dashboard reducing fleet costs by 35% and stockouts by 20%, showcasing my ability to solve critical business problems.
 
-I’m preparing to apply for the Software Engineer (Fullstack) role at RudderStack this spring and would appreciate the opportunity to ask you a few specific questions about the role and your experience. Would you be available for a quick 15-minute chat at [Insert Specific Time]?
+I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, and will be graduating in May 2025. I’d love the opportunity to discuss how my skills align with Zendesk’s engineering goals.
 
-Thanks so much in advance for your time!
+Would you be available for a quick chat? If you’re not the right person, I’d truly appreciate it if you could forward my profile to the appropriate hiring manager.
+
+Looking forward to your response!
 
 Best regards,  
 Sumit Rodrigues  
@@ -55,7 +59,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Rudderstack.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Zendesk.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
