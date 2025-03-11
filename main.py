@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/zendesk-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/rakuten-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,25 +31,24 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Excited to Apply for Software Engineer II (Front-End) Role at Zendesk - R30251"
+SUBJECT = "Excited to Apply for Software Engineer (Backend) at Rakuten - 1025404"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineer II (Front-End) role at Zendesk and wanted to express my enthusiasm for this opportunity.
+I hope you're doing well! I recently applied for the Software Engineer (Backend) - Evergreen position at Rakuten and wanted to follow up on my application. I am very excited about this opportunity, given my strong background in backend development, microservices architecture, and cloud infrastructure.
 
-A bit about me:
+I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, with an expected graduation in May 2025. My academic and professional experiences have equipped me with:
 
-- Frontend Expertise: Developed responsive web applications using React.js, TypeScript, and Java, ensuring optimal user experiences across devices.
-- Performance Optimization: Leveraged Webpack, Babel, and tree-shaking techniques to reduce frontend compilation time by 50% for high-traffic applications.
-- API Development & Integration: Designed and integrated RESTful and GraphQL APIs, ensuring secure data retrieval and efficient database queries.
-- Cloud & DevOps: Automated CI/CD pipelines using Jenkins, Docker, and Kubernetes, cutting deployment time from 4 hours to 20 minutes with zero downtime.
-- Real-World Impact: Built an AI-powered inventory prediction dashboard reducing fleet costs by 35% and stockouts by 20%, showcasing my ability to solve critical business problems.
+- Developing and maintaining scalable RESTful APIs & microservices using Java (Spring Boot), Python (FastAPI), and Node.js for high-traffic applications.
+- Building event-driven architectures with Kafka, Redis, and PostgreSQL, ensuring real-time processing and system scalability.
+- Working with cloud platforms like AWS, Google Cloud, and Kubernetes, deploying secure and efficient backend solutions.
+- Automating CI/CD pipelines using Jenkins, Terraform, and GitHub Actions, reducing deployment times and improving infrastructure reliability.
 
-I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, and will be graduating in May 2025. I’d love the opportunity to discuss how my skills align with Zendesk’s engineering goals.
+I am particularly drawn to Rakuten’s emphasis on innovation in e-commerce and rewards and would love the opportunity to contribute to scalable backend solutions that enhance user engagement. If there are any additional materials or details I can provide, I’d be happy to do so.
 
-Would you be available for a quick chat? If you’re not the right person, I’d truly appreciate it if you could forward my profile to the appropriate hiring manager.
+Would you be open to a quick chat regarding my application? 
 
-Looking forward to your response!
+Looking forward to hearing from you.
 
 Best regards,  
 Sumit Rodrigues  
@@ -59,7 +58,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Zendesk.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Rakuten Backend.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
