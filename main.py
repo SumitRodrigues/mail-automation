@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/rakuten-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/ptc-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,24 +31,29 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Excited to Apply for Software Engineer (Backend) at Rakuten - 1025404"
+SUBJECT = "Application for Software Development Intern (Job ID: JR109049)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineer (Backend) - Evergreen position at Rakuten and wanted to follow up on my application. I am very excited about this opportunity, given my strong background in backend development, microservices architecture, and cloud infrastructure.
+I hope you're doing well! I recently applied for the Software Development Intern role at PTC (Job ID: JR109049) using a referral and wanted to follow up on my application. I am very excited about this opportunity, as my experience in web client development, UI/UX optimizations, and cloud-native applications aligns well with Onshape’s mission of modernizing product design.
 
-I am currently pursuing my Master’s in Computer Science at California State University, Fullerton, with an expected graduation in May 2025. My academic and professional experiences have equipped me with:
+Job Link: https://ptc.wd1.myworkdayjobs.com/en-US/PTC/job/Software-Development-Intern_JR109049
 
-- Developing and maintaining scalable RESTful APIs & microservices using Java (Spring Boot), Python (FastAPI), and Node.js for high-traffic applications.
-- Building event-driven architectures with Kafka, Redis, and PostgreSQL, ensuring real-time processing and system scalability.
-- Working with cloud platforms like AWS, Google Cloud, and Kubernetes, deploying secure and efficient backend solutions.
-- Automating CI/CD pipelines using Jenkins, Terraform, and GitHub Actions, reducing deployment times and improving infrastructure reliability.
+I am currently pursuing my Master’s in Computer Science at California State University, Fullerton. 
 
-I am particularly drawn to Rakuten’s emphasis on innovation in e-commerce and rewards and would love the opportunity to contribute to scalable backend solutions that enhance user engagement. If there are any additional materials or details I can provide, I’d be happy to do so.
+Here's why I am the best fit for the role:
+
+- Building dynamic, responsive web applications using React.js, TypeScript, and Java, improving UI/UX across desktop and mobile.
+- Developing reusable UI components from Figma designs for TUSK Magazine, enhancing frontend consistency and reducing development time by 25%.
+- Optimizing JavaScript execution with Webpack, Babel, and Tree Shaking, reducing frontend build time by 50%.
+- Implementing real-time collaboration features using WebSockets & GraphQL, ensuring smooth multi-user workflows.
+- Building scalable UI component libraries using Storybook, streamlining development and improving UI consistency across 10+ enterprise applications.
+
+With my strong foundation in modern frontend frameworks (React.js, Next.js), RESTful API integrations, and cloud-native application development, I am eager to contribute to PTC’s web client development team and help shape the next generation of Onshape’s 3D CAD platform.
 
 Would you be open to a quick chat regarding my application? 
 
-Looking forward to hearing from you.
+Looking forward to hearing from you!
 
 Best regards,  
 Sumit Rodrigues  
@@ -58,7 +63,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Rakuten Backend.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - PTC.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
