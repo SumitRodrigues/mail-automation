@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/ptc-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/zebra-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,25 +31,23 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Software Development Intern (Job ID: JR109049)"
+SUBJECT = "Application for Software Engineer II role at Zebra Technologies (Job ID: 107808)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Development Intern role at PTC (Job ID: JR109049) using a referral and wanted to follow up on my application. I am very excited about this opportunity, as my experience in web client development, UI/UX optimizations, and cloud-native applications aligns well with Onshape’s mission of modernizing product design.
+I hope you're doing well! I recently applied for the Software Engineer II role at Zebra Technologies (Job ID: 107808) and wanted to follow up on my application. I am very excited about this opportunity, as my background in backend development, cloud computing, and troubleshooting SaaS solutions aligns well with the role’s requirements.
 
-Job Link: https://ptc.wd1.myworkdayjobs.com/en-US/PTC/job/Software-Development-Intern_JR109049
+- Job Link: https://zebra.eightfold.ai/careers?pid=343623588121
 
-I am currently pursuing my Master’s in Computer Science at California State University, Fullerton. 
+I am currently pursuing my Master’s in Computer Science at California State University, Fullertonion. My experience includes:
 
-Here's why I am the best fit for the role:
+- Developing scalable microservices and RESTful APIs using Java, Spring Boot, and PostgreSQL, ensuring high availability and performance for cloud-based applications.
+- Deploying and managing SaaS solutions on AWS & Google Cloud (AlloyDB, GKE), optimizing database query performance and ensuring seamless scalability.
+- Troubleshooting and resolving API failures and infrastructure bottlenecks using Datadog and distributed tracing, reducing incident resolution times by 60%.
+- Implementing real-time event streaming services with WebSockets and Kafka, enhancing low-latency communication for collaboration and push-to-talk systems.
+- Automating CI/CD pipelines using Jenkins, GitHub Actions, and Terraform, ensuring zero downtime deployments for enterprise applications.
 
-- Building dynamic, responsive web applications using React.js, TypeScript, and Java, improving UI/UX across desktop and mobile.
-- Developing reusable UI components from Figma designs for TUSK Magazine, enhancing frontend consistency and reducing development time by 25%.
-- Optimizing JavaScript execution with Webpack, Babel, and Tree Shaking, reducing frontend build time by 50%.
-- Implementing real-time collaboration features using WebSockets & GraphQL, ensuring smooth multi-user workflows.
-- Building scalable UI component libraries using Storybook, streamlining development and improving UI consistency across 10+ enterprise applications.
-
-With my strong foundation in modern frontend frameworks (React.js, Next.js), RESTful API integrations, and cloud-native application development, I am eager to contribute to PTC’s web client development team and help shape the next generation of Onshape’s 3D CAD platform.
+With my strong foundation in backend development, SaaS troubleshooting, cloud architecture (AWS, GCP), and real-time communication technologies, I am eager to contribute to Zebra’s next-generation SaaS collaboration and communication platform.
 
 Would you be open to a quick chat regarding my application? 
 
@@ -63,7 +61,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - PTC.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Zebra Tech.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
