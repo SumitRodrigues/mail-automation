@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/zebra-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/target-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,25 +31,22 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Application for Software Engineer II role at Zebra Technologies (Job ID: 107808)"
+SUBJECT = "Application for Full Stack Engineer (UI-Focused) Role at Target (Job ID: R0000385926)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently applied for the Software Engineer II role at Zebra Technologies (Job ID: 107808) and wanted to follow up on my application. I am very excited about this opportunity, as my background in backend development, cloud computing, and troubleshooting SaaS solutions aligns well with the role’s requirements.
+I recently applied for the Full Stack Engineer (UI-Focused) role at Target and wanted to follow up to express my enthusiasm for this opportunity. With my strong expertise in React.js, TypeScript, Java, and scalable UI/UX development, I believe I can contribute meaningfully to Target’s Owned Brands Cost Management team in building robust, user-friendly solutions for cost visibility and vendor negotiations.
 
-- Job Link: https://zebra.eightfold.ai/careers?pid=343623588121
+Job Link: https://corporate.target.com/jobs/w59/26/full-stack-engineer-ui-focused-owned-brands-costing-management
 
-I am currently pursuing my Master’s in Computer Science at California State University, Fullertonion. My experience includes:
+Why I’m a Strong Fit for This Role:
 
-- Developing scalable microservices and RESTful APIs using Java, Spring Boot, and PostgreSQL, ensuring high availability and performance for cloud-based applications.
-- Deploying and managing SaaS solutions on AWS & Google Cloud (AlloyDB, GKE), optimizing database query performance and ensuring seamless scalability.
-- Troubleshooting and resolving API failures and infrastructure bottlenecks using Datadog and distributed tracing, reducing incident resolution times by 60%.
-- Implementing real-time event streaming services with WebSockets and Kafka, enhancing low-latency communication for collaboration and push-to-talk systems.
-- Automating CI/CD pipelines using Jenkins, GitHub Actions, and Terraform, ensuring zero downtime deployments for enterprise applications.
+- Frontend Engineering & Scalable UI Development → Built responsive, high-performance SPAs using React.js, TypeScript, and SCSS, ensuring seamless cost tracking interfaces for finance dashboards.
+- Full-Stack Development & API Integration → Designed RESTful APIs using Java & Spring Boot, integrating NoSQL (PostgreSQL, MongoDB) for real-time financial data processing—aligning with Target’s need for backend expertise.
+- Cloud & Scalable Application Development → Deployed microservices-based applications on AWS & Google Cloud, optimizing cost analysis systems for enterprise-scale decision-making.
+- Collaboration & Agile Development → Worked closely with UX designers, product managers, and backend teams, improving data visualization workflows and vendor cost negotiation tools.
 
-With my strong foundation in backend development, SaaS troubleshooting, cloud architecture (AWS, GCP), and real-time communication technologies, I am eager to contribute to Zebra’s next-generation SaaS collaboration and communication platform.
-
-Would you be open to a quick chat regarding my application? 
+I’m excited about the opportunity to bring my technical expertise, customer-focused mindset, and problem-solving approach to Target’s Costing Management team. I’d love the chance to discuss how my skills align with this role—please let me know if we can set up a time to connect.
 
 Looking forward to hearing from you!
 
@@ -61,7 +58,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Zebra Tech.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Target Frontend.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
