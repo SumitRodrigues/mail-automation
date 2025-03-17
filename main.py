@@ -31,23 +31,23 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Excited to Apply – Application Engineer Role at BlackRock (R251256)"
+SUBJECT = "Excited to Apply for Software Engineer, Frontend (EAA) at Coinbase (G2700)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you’re doing well! I recently came across the Application Engineer role at BlackRock, and I am incredibly excited about the opportunity to contribute my full-stack expertise in Java, Python, Spring Boot, React.js, and cloud technologies to your team. Given BlackRock’s commitment to scalability, AI-driven solutions, and financial innovation, I believe my experience aligns well with this position.
+I hope you’re doing well! I recently came across the Software Engineer, Frontend (EAA) role at Coinbase, and I am incredibly excited about the opportunity to contribute my frontend expertise in React.js, TypeScript, API integrations, and cloud technologies to your team. Given Coinbase’s commitment to scalability, automation, and customer experience, I believe my experience aligns well with this position.
 
-Job Link: https://careers.blackrock.com/job/-/-/45831/78710116608
+Job Link: https://www.coinbase.com/careers/positions/6652029?gh_jid=6652029
 
-Why I’m a Strong Fit for BlackRock:
+Why I’m a Strong Fit for Coinbase:
 
-- Enterprise Software Development → Led the end-to-end development of KYC Scoring and Self-Service Tools at BNP Paribas, using Java, Spring Boot, and Kafka, delivering projects two weeks ahead of schedule.
-- API & Microservices Architecture → Developed RESTful & GraphQL APIs, integrating OAuth, JWT authentication, and gRPC, ensuring secure and scalable API interactions.
-- Frontend UI & State Management → Built React.js dashboards with Redux Toolkit, RTK Query, and TypeScript, improving UI performance by 30% for high-traffic fintech applications.
-- Cloud & DevOps Expertise → Automated CI/CD pipelines with Jenkins, Kubernetes, and AWS Lambda, cutting deployment times by 80% while ensuring zero downtime.
-- AI & Data Engineering → Designed an AI-powered inventory prediction system using Python, Machine Learning, and SQL, reducing fleet costs by 35% and stockouts by 20%—aligning with BlackRock’s AI-driven innovation goals.
+- Frontend Development & UI/UX Optimization → Built React.js dashboards at BNP Paribas, implementing Redux Toolkit and GraphQL, improving UI performance by 30% for high-traffic fintech applications.
+- API & Third-Party Integrations → Integrated OAuth 2.0, JWT authentication, and RESTful APIs, ensuring seamless and secure interactions for customer service platforms.
+- Performance & Scalability → Optimized component rendering using React.memo, lazy loading, and server-side rendering (SSR), reducing load times by 25% and enhancing agent productivity.
+- Cloud & DevOps Experience → Deployed customer service dashboards on AWS, automated CI/CD pipelines with Jenkins, Docker, and Kubernetes, reducing deployment times by 80%.
+- Customer-Centric Engineering → Developed internal tools that streamlined KYC onboarding workflows, reducing form errors by 50%, increasing customer completion rates, and improving agent efficiency.
 
-I am eager to bring my technical problem-solving skills, financial technology expertise, and commitment to high-performance engineering to BlackRock’s Aladdin platform. I would love to discuss how my skills can add value to your team.
+I am eager to bring my technical problem-solving skills, customer-focused engineering mindset, and ability to build high-performance UI applications to Coinbase’s Agent Productivity Tools team.
 
 Would you be open to a quick call to explore this further? 
 
@@ -61,7 +61,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume -Blackrock.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Coinbase Frontend.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
