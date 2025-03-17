@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/purestorage-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/chewy-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,19 +31,19 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Excited to Apply for Software Engineer Grad Role at Pure Storage"
+SUBJECT = "Excited to Apply for Software Engineer II Position at Chewy (R25920)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well! I recently came across the Software Engineer Grad position at Pure Storage in Santa Clara and was excited to apply. I am highly interested in this role, given Pure Storage’s focus on optimizing data infrastructure and delivering high-performance storage solutions.
+I hope you're doing well! I recently applied for the Software Engineer II position at Chewy and wanted to express my enthusiasm for the opportunity. With 4+ years of experience in full-stack development, I believe my expertise in React.js, Java, Spring Boot, and scalable microservices aligns well with the role.
 
-With my background in C++ development, distributed systems, and performance optimization, I believe I can contribute meaningfully to your team. At BNP Paribas, I worked on optimizing high-frequency data pipelines using C++ and multithreading, improving data retrieval speeds by 40%. Additionally, I have hands-on experience in Linux systems, containerization (Docker, Kubernetes), and memory-efficient algorithms, which aligns well with Pure Storage’s emphasis on optimizing data replication and storage solutions.
+At BNP Paribas, I led the transition of a multi-page fintech system to a high-performance React.js & Next.js application, reducing load times by 50%. I also developed real-time dashboards using React and D3.js to help financial analysts visualize large datasets efficiently. Additionally, I built and optimized Java Spring Boot services, implementing robust CI/CD pipelines with Jenkins and Docker to cut deployment time by 80%. My work in AWS, RESTful API development, and performance optimization could directly contribute to Chewy’s mission of delivering a seamless customer experience.
 
 I would appreciate the opportunity to discuss how my background fits within your team. If my profile aligns with the role, I’d love for you to evaluate my application or forward it to the hiring team.
 
 Looking forward to your response.
 
-Job Link: https://job-boards.greenhouse.io/purestorage/jobs/6271124
+Job Link: https://careers.chewy.com/us/en/job/6681607/Software-Engineer-II
 
 Best regards,  
 Sumit Rodrigues  
@@ -53,7 +53,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume Pure Storage SWE.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume Chewy SWE 2.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
