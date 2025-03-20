@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # ✅ Ensure CSV file exists before reading
-CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/thousandeyes-recipients.csv"
+CSV_FILE = "/Users/sumitrodrigues/Documents/mail-automation/servicenow-recipients.csv"
 if not os.path.exists(CSV_FILE):
     print(f"Error: '{CSV_FILE}' file not found.")
     exit()
@@ -31,19 +31,23 @@ if "Email" not in df.columns:
     exit()
 
 # ✅ Hardcoded email subject and message
-SUBJECT = "Excited to Apply for Software Engineer Intern - Cloud and Enterprise Agents role at Cisco ThousandEyes"
+SUBJECT = "Excited to Apply for Software Engineer - 2025 New College Grad Role at ServiceNow (JB0051041)"
 MESSAGE = """\
 Hi [Recipient Name],
 
-I hope you're doing well. I recently came across the Software Engineer Intern, Cloud and Enterprise Agents role at Cisco ThousandEyes, and I’m excited about the opportunity to contribute my skills in React, TypeScript, and microservices development to your team.
+I hope you're doing well! My name is Sumit Rodrigues, and I’m currently pursuing my Master’s in Computer Science at California State University, Fullerton. I’m passionate about building scalable web applications, AI-driven solutions, and cloud-based systems, and I’m excited about the opportunity to apply for the Software Engineer - 2025 New College Grad role at ServiceNow.
 
-I’m particularly drawn to this position because of ThousandEyes' mission to ensure seamless digital experiences through cutting-edge observability solutions. With my 2+ years of experience in developing scalable micro-frontends using React and Module Federation, as well as integrating real-time APIs for dynamic user experiences, I believe I can bring value to your team. Additionally, my background in testing with Cypress and Cucumber, along with experience in deploying microservices in cloud environments, aligns well with the role's requirements.
+Here’s a little about me:
+
+- As a Web Developer Student Assistant at CSUF, I developed React-based applications, integrated TitanGPT AI chatbots, and built RESTful API-powered platforms to improve user experience.
+- At BNP Paribas, I worked on Java Spring Boot microservices, designed real-time dashboards with React and TypeScript, and optimized API efficiency.
+- I’ve also developed projects like a real estate marketplace app and a financial dashboard, leveraging React Native, Next.js, and TypeScript to enhance performance and user engagement.
 
 I would love the opportunity to discuss my application further. If possible, could you kindly review my profile or forward my application to the hiring team? 
 
 Looking forward to your response!
 
-Job Link: https://job-boards.greenhouse.io/thousandeyes/jobs/6678480
+Job Link: https://careers.servicenow.com/jobs/744000048858191/software-engineer-2025-new-college-grad/?trid=2d92f286-613b-4daf-9dfa-6340ffbecf73
 
 Best regards,  
 Sumit Rodrigues  
@@ -53,7 +57,7 @@ Email: sumitrod11@gmail.com
 """
 
 # ✅ Resume file path validation
-RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - ThousandEyes.pdf"
+RESUME_FILENAME = "/Users/sumitrodrigues/Documents/mail-automation/Sumit_Rodrigues_Resume - Servicenow New College Grad.pdf"
 if not os.path.exists(RESUME_FILENAME):
     print(f"Error: Resume file '{RESUME_FILENAME}' not found. Exiting.")
     exit()
